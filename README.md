@@ -1,1 +1,2 @@
-# react-tictactoe
+# Tic Tac Toe with React
+
