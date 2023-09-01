@@ -1,11 +1,19 @@
 import { useState } from 'react';
-import Board from './Board';
+import Board from './components/Board';
+import Todo from './components/Todo';
 
 export default function Game() {
+  // for tictactoe tutorial
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+
+  //for jest tutorial
+  const todos = [ 
+    {id : 1 , title: 'wash dishes', completed: false, },
+    {id : 2 , title: 'throw rubbish', completed: true, },
+  ];
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -32,7 +40,12 @@ export default function Game() {
   });
 
   return (
+    <>
+    { todos.map((todo) => {
+      return (<Todo todo={todo}/>)
+    })}
     <div className="game">
+      
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
@@ -40,5 +53,6 @@ export default function Game() {
         <ol>{moves}</ol>
       </div>
     </div>
+    </>
   );
 }
