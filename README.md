@@ -8,8 +8,7 @@ before:
 
 
 after:
-<img width="1713" alt="Screenshot 2023-09-01 at 12 37 25" src="https://github.com/hellospacecorgi/react-tictactoe/assets/24476996/1847af7a-8497-40fc-ba02-47b2cbbfee40">
-
+<img width="1715" alt="Screenshot 2023-09-01 at 12 37 57" src="https://github.com/hellospacecorgi/react-tictactoe/assets/24476996/e256ecd6-9ca5-4794-972f-e9a5e648cc93">
 
 
 TODO:
