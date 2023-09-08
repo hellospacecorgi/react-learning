@@ -87,7 +87,9 @@ function App() {
         </div>
       </div>
       <div className="container">
-        <button onClick={handleOnClick}>Add animals</button>
+        <button className="add-animal-button" onClick={handleOnClick}>
+          Add animals
+        </button>
         <div className="container">
           <section className="section">
             <div className="columns">

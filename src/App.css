@@ -175,7 +175,7 @@ button {
   align-items: center;
 }
 
-button {
+.add-animal-button {
   background-color: black;
   border: 1px solid blue;
   border-radius: 3px;
