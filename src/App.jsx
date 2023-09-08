@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Board from './components/Board';
-import Todo from './components/Todo';
+import { useState } from "react";
+import Board from "./components/Board";
+import Todo from "./components/Todo";
 
 export default function Game() {
   // for tictactoe tutorial
@@ -10,9 +10,9 @@ export default function Game() {
   const currentSquares = history[currentMove];
 
   //for jest tutorial
-  const todos = [ 
-    {id : 1 , title: 'wash dishes', completed: false, },
-    {id : 2 , title: 'throw rubbish', completed: true, },
+  const todos = [
+    { id: 1, title: "wash dishes", completed: false },
+    { id: 2, title: "throw rubbish", completed: true },
   ];
 
   function handlePlay(nextSquares) {
@@ -28,9 +28,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = 'Go to move #' + move;
+      description = "Go to move #" + move;
     } else {
-      description = 'Go to game start';
+      description = "Go to game start";
     }
     return (
       <li key={move}>
@@ -41,18 +41,21 @@ export default function Game() {
 
   return (
     <>
-    { todos.map((todo) => {
-      return (<Todo todo={todo}/>)
-    })}
-    <div className="game">
-      
-      <div className="game-board">
-        <Board data-testid='board-id-1' xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      {todos.map((todo) => {
+        return <Todo todo={todo} />;
+      })}
+      <div className="game">
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="game-info">
+          <ol>{moves}</ol>
+        </div>
       </div>
-      <div className="game-info">
-        <ol>{moves}</ol>
-      </div>
-    </div>
     </>
   );
 }
