@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Board from "./Board";
 
-export default function Game() {
+function Game() {
   // for tictactoe tutorial
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
@@ -49,3 +49,5 @@ export default function Game() {
     </>
   );
 }
+
+export default Game;
