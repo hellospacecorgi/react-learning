@@ -10,7 +10,7 @@ function TodoPage() {
   return (
     <div>
       {todos.map((todo) => {
-        return <Todo todo={todo} />;
+        return <Todo key={todo.id} todo={todo} />;
       })}
     </div>
   );

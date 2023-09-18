@@ -41,6 +41,11 @@
   color: #888;
 } */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -189,4 +194,4 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
