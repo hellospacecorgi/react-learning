@@ -6,6 +6,7 @@ function Sidebar() {
     { label: "Animal", path: "/animal" },
     { label: "Todo", path: "/todo" },
     { label: "Tic Tac Toe", path: "/tictactoe" },
+    { label: "Accordion", path: "/accordion" },
   ];
 
   const renderedLinks = links.map((link) => {

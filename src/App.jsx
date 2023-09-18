@@ -5,6 +5,7 @@ import AnimalPage from "./pages/AnimalPage";
 import ProfileCardPage from "./pages/ProfileCardPage";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AccordionPage from "./pages/AccordionPage";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             <Route path="/todo" element={<TodoPage />} />
 
             <Route path="/tictactoe" element={<TicTacToePage />} />
+
+            <Route path="/accordion" element={<AccordionPage />} />
           </Routes>
         </div>
       </div>
