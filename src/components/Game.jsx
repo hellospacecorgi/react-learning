@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Board from "./Board";
-import "../Game.css";
+import "../styles/Game.css";
 
 function Game() {
   // for tictactoe tutorial

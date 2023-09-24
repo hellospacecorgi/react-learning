@@ -6,7 +6,7 @@ import gator from "../assets/svg/gator.svg";
 import horse from "../assets/svg/horse.svg";
 import heart from "../assets/svg/heart.svg";
 import { useState } from "react";
-import "./AnimalShow.css";
+import "../styles/AnimalShow.css";
 
 const svgMap = {
   bird,
@@ -27,13 +27,13 @@ function AnimalShow({ type }) {
       <img
         className="animal"
         src={svgMap[type]}
-        atl={type}
+        alt={type}
         onClick={handleClick}
       ></img>
       <img
         className="heart"
         src={heart}
-        atl="heart"
+        alt="heart"
         style={{ width: 10 + 10 * clicks }}
       ></img>
     </div>

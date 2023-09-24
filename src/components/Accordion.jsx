@@ -29,20 +29,48 @@ function Accordion({ items }) {
       });
     };
 
+    const dataBsTargetId = `#${item.id}`;
+
     return (
-      <div key={item.id}>
+      // <div key={item.id}>
+      //   <div
+      //     className="box has-text-primary-light has-background-info"
+      //     onClick={() => handleClick(index)}
+      //   >
+      //     {item.label}
+      //     {icon}
+      //   </div>
+      //   {content}
+      // </div>
+      <div className="accordion-item" key={item.id}>
+        <h2 className="accordion-header">
+          <button
+            className="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target={dataBsTargetId}
+            aria-expanded="false"
+            aria-controls={item.id}
+          >
+            Accordion Item #{item.id} {item.label}
+          </button>
+        </h2>
         <div
-          className="box has-text-primary-light has-background-info"
-          onClick={() => handleClick(index)}
+          id={item.id}
+          className="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
         >
-          {item.label}
-          {icon}
+          <div className="accordion-body">{item.content}</div>
         </div>
-        {content}
       </div>
     );
   });
-  return <div className="has-text-primary-light">{renderedItems}</div>;
+
+  return (
+    <div className="accordion has-text-primary-light" id="accordionExample">
+      {renderedItems}
+    </div>
+  );
 }
 
 export default Accordion;

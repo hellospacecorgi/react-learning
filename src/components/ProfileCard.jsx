@@ -1,17 +1,17 @@
 function ProfileCard({ title, handle, imageSrc, description }) {
   return (
-    <div className="card">
-      <div className="card-image">
-        <figure className="image is-1by1">
-          <img src={imageSrc} alt="pda logo" />
-        </figure>
+    <div className="card text-center">
+      <div className="card-header">{title}</div>
+      <div className="embed-responsive embed-responsive-1by1">
+        <img
+          className="card-img-top py-3 px-3 embed-responsive-item"
+          src={imageSrc}
+          alt="pda logo"
+        />
       </div>
       <div className="card-content">
-        <div className="media-content">
-          <div className="title is-4">{title}</div>
-          <div className="subtitle is-6">{handle}</div>
-        </div>
-        <div className="content">{description}</div>
+        <div className="card-title">{handle}</div>
+        <div className="card-footer text-body-secondary">{description}</div>
       </div>
     </div>
   );

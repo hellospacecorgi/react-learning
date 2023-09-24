@@ -19,21 +19,22 @@ function AnimalPage() {
 
   return (
     <div>
-      <div className="hero is-primary" style={{ marginBottom: 10 }}>
-        <div className="hero-body">
-          <p className="title">Favourite Animals List</p>
-        </div>
-      </div>
       <div className="container">
-        <button className="add-animal-button" onClick={handleOnClick}>
-          Add animals
-        </button>
+        <p className="h1 p-3 mb-2 bg-success text-white">
+          Favourite Animals List - button, useState, reusable component
+        </p>
+
         <div className="container">
-          <section className="section">
-            <div className="columns">
-              <div className="animal-list">{renderAnimals}</div>
-            </div>
-          </section>
+          <button className="add-animal-button" onClick={handleOnClick}>
+            Add animals
+          </button>
+          <div className="container">
+            <section className="section">
+              <div className="columns">
+                <div className="animal-list">{renderAnimals}</div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
