@@ -1,22 +1,16 @@
-import Todo from "../components/Todo";
+import TodoForm from "../components/TodoForm";
+import TodoList from "../components/TodoList";
+import TodoSearch from "../components/TodoSearch";
 
 function TodoPage() {
-  //for jest tutorial
-  const todos = [
-    { id: 1, title: "wash dishes", completed: false },
-    { id: 2, title: "throw rubbish", completed: true },
-  ];
-
   return (
     <div>
-      <div className="container">
-        <p className="h1 p-3 mb-2 bg-success text-white">
-          Todo List - Array map operation
-        </p>
-
-        {todos.map((todo) => {
-          return <Todo key={todo.id} todo={todo} />;
-        })}
+      <div className="container is-fluid">
+        <p className="h1 p-3 mb-2 bg-success text-white">Todo List</p>
+        <TodoForm />
+        <hr />
+        <TodoSearch />
+        <TodoList />
       </div>
     </div>
   );
